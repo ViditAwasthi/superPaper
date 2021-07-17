@@ -4,15 +4,21 @@ import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
 
+
 function App() {
+  
   const [notes, setNotes] = useState([]);
 
+
+ 
+
   function addNote(newNote) {
-    if(newNote.title !=="" && newNote.content!==""){
+    if(newNote.content !=="" && newNote.title !==""){
     setNotes(prevNotes => {
       return [...prevNotes, newNote];
     });
   }
+
   }
 
   function deleteNote(id) {
